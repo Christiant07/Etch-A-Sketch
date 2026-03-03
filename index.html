@@ -10,14 +10,18 @@
 <body>
     <div class = "buttons">
         <label>Enter a Height and Width of the Grid:</label>
-        <input type = "number" id = "size" placeholder="size">
+        <input type = "number" id = "size" placeholder="size" onchange = "createGrid(Number(this.value))">
         <button id = "eraser">Eraser</button>
         <button id = "pen">Pen</button>
-        <button>Reset</button>
+        <button id = "reset">Reset</button>
         <label>Choose a Color:</label>
         <input type = "color" id = "color-picker">
     </div>
-    <div id = "grid"></div>
+    
+    <div class = "grid-exterior">
+        <div id = "grid"></div>
+    </div>
+
 </body>
 <script src = "index.js"></script>
 </html>

@@ -22,9 +22,16 @@ button {
 
 #grid {
     display: grid;
-    grid-template-columns: string;
-    grid-template-rows: string;
+    max-width:650px;
+    grid-template-columns: repeat(10, 65px);
+    grid-template-rows: repeat(10, 65px);
     background-color: #F7F0E6;
-    gap: 10px;
-    border: 3px solid black;
+    align-content: center;
+    /* gap: 10px;
+    border: 3px solid black; */
+}
+
+.grid-exterior {
+    display: flex;
+    justify-content: center;
 }
