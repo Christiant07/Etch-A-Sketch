@@ -34,23 +34,24 @@ gridPieces.forEach((i) => i.addEventListener("mouseover", chooser)) //applies a 
 //     this.style.background = "white";
 // }
 
+let reseter = document.getElementById("reset");
+reseter.addEventListener("click", reset)
 function reset() {
-    gridPieces.forEach((i) => i.style.background = "white")//for evryr element in our grid box, set eahc grid piece to white
+    gridPieces.forEach((i) => i.style.background = "#F7F0E6")//for evryr element in our grid box, set eahc grid piece to white
 }
 
-let switcher = null;
 let erasing = document.getElementById("eraser");
 let pen = document.getElementById("pen");
-let reseter = document.getElementById("reset");
+let colorPicker = document.getElementById("color-picker");
 erasing.addEventListener("click", () => {switcher = 0})
 pen.addEventListener("click", () => {switcher = 1})
-reseter.addEventListener("click", reset)
 
+let switcher = null;
 function chooser() {
     if (switcher == 0) {
-        this.style.background = "white";;
+        this.style.background = "#F7F0E6";;
     } else {
-        this.style.background = "pink";
+        this.style.backgroundColor = colorPicker.value;
     }
 }
 
@@ -60,8 +61,8 @@ function createGrid(num) {
     // document.getElementById("grid").style.gridTemplateRows = string;
     let gridBox = document.getElementById("grid")
     for (let i = 0; i < num*num; i++) {
-        div = document.createElement("div");
-        div.classList.add("gridpiece");
+        div = document.createElement("div");//creating a div in the document or html
+        div.classList.add("gridpiece");//adding a class called gripieces to our div that holds all of them
         div.style.borderWidth = "3px";
         div.style.border = "solid black";
         gridBox.appendChild(div);//appends every div we created into the our grid box or grid from html

@@ -3,6 +3,7 @@
     justify-content: center;
     justify-content:space-between;
     flex-direction: column;
+    color:#F7F0E6;
 }
 
 .title {
@@ -26,7 +27,6 @@ button {
     grid-template-columns: repeat(10, 65px);
     grid-template-rows: repeat(10, 65px);
     background-color: #F7F0E6;
-    align-content: center;
     /* gap: 10px;
     border: 3px solid black; */
 }
