@@ -5,22 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-A-Sketch</title>
     <link rel = "stylesheet" href = "style.css">
-    <h1 class = "title">Etch-A-Sketch</h1>
 </head>
 <body>
-    <div class = "buttons">
-        <label>Enter a Height and Width of the Grid:</label>
-        <input type = "number" id = "size" placeholder="size" onchange = "createGrid(Number(this.value))">
-        <button id = "eraser">Eraser</button>
-        <button id = "pen">Pen</button>
-        <button id = "reset">Reset</button>
-        <label>Choose a Color:</label>
-        <input type = "color" id = "color-picker">
+    <h1 class = "title">Etch-A-Sketch</h1>
+    <div class = "but-grid">
+        <div class = "buttons">
+            <div>
+                <label>Enter a Height and Width of the Grid:</label>
+                <input type = "number" id = "size" placeholder="size" onchange = "createGrid(Number(this.value))">
+            </div>
+            <div>
+                <button id = "eraser">Eraser</button>
+                <button id = "pen">Pen</button>
+                <button id = "reset">Reset</button>
+            </div>
+            <div>
+                <label>Choose a Color:</label>
+                <input type = "color" id = "color-picker"></div>
+        </div>
+        <div class = "grid-exterior">
+            <div id = "grid"></div>
+        </div>
     </div>
     
-    <div class = "grid-exterior">
-        <div id = "grid"></div>
-    </div>
 
 </body>
 <script src = "index.js"></script>

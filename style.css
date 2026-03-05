@@ -1,9 +1,14 @@
 .buttons {
     display: flex;
-    justify-content: center;
-    justify-content:space-between;
     flex-direction: column;
     color:#F7F0E6;
+    justify-content: center;
+    gap: 3%;
+}
+
+.but-grid {
+    display: flex;
+    justify-content: center;
 }
 
 .title {
@@ -19,19 +24,21 @@ body {
 button {
     background-color: #FFC857;
     color: white;
+    width: 20%;
+}
+
+input {
+    width: 20%;
+}
+
+label {
+    width: 85%;
 }
 
 #grid {
     display: grid;
-    max-width:650px;
-    grid-template-columns: repeat(10, 65px);
-    grid-template-rows: repeat(10, 65px);
+    width: 40vw;
+    height: 40vw;
     background-color: #F7F0E6;
-    /* gap: 10px;
-    border: 3px solid black; */
 }
 
-.grid-exterior {
-    display: flex;
-    justify-content: center;
-}
